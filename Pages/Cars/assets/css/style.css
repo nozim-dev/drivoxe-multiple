@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+
+:root {
+    --fontSyne: "Syne", sans-serif;
+    --colorBlack: #222;
+    --colorRed: #fd3b3b;
+    --colorWhite: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1340px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.hader_logo {
+    width: 100%;
+    max-width: 147px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hader_logo>img {
+    width: 100%;
+}
+
+.header_nav {
+    width: 100%;
+    max-width: 369px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_nav>a {
+    text-decoration: none;
+    font-family: var(--fontSyne);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: var(--colorBlack);
+    transition: all 0.4s;
+}
+
+.header_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 206px;
+}
+
+.header_btn>a {
+    font-family: var(--fontSyne);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    color: var(--colorRed);
+    text-decoration: none;
+    position: relative;
+    transition: all 0.4s;
+}
+
+.header_btn>a:hover {
+    color: var(--colorBlack);
+}
+
+.header_nav>a:hover {
+    color: var(--colorRed);
+}
+
+.header_btn>a::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -16px;
+    background-color: var(--colorBlack);
+    opacity: 0.5;
+}
+
+.header_btn>button {
+    width: 100%;
+    max-width: 120px;
+    border-radius: 32px;
+    background-color: var(--colorRed);
+    font-family: var(--fontSyne);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.2px;
+    color: var(--colorWhite);
+    padding: 10.5px 26px;
+    border: 2px solid var(--colorRed);
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.header_btn>button:hover {
+    background-color: var(--colorWhite);
+    color: var(--colorRed);
+}
