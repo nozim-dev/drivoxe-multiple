@@ -489,7 +489,6 @@ color: #222;
   color: var(--colorBlack);
 }
 .footer_button{
-  border-box:red;
   width:212px;
 height:40px;
 padding: 10px 26px 10px 26px;
