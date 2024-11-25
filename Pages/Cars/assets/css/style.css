@@ -5,8 +5,10 @@
   --colorBlack: #222;
   --colorRed: #fd3b3b;
   --colorWhite: #fff;
-  --colorRed:#fd3b3b
-  --fontSyne:var(--fontSyne)
+  --colorRed:#fd3b3b;
+  --fontSyne:var(--fontSyne);
+  font-family:var(--fontSyne);
+  font-family: var(--fontSyne);
 }
 
 * {
@@ -64,7 +66,7 @@ header {
   align-items: center;
   width: 100%;
   max-width: 206px;
-  background-color:#fd3b3b
+ 
 }
 
 .header_btn > a {
@@ -76,7 +78,7 @@ header {
   text-decoration: none;
   position: relative;
   transition: all 0.4s;
-  color: #ffffff;
+  color: #c71e1e;
 }
 
 .header_btn > a:hover {
@@ -102,7 +104,7 @@ header {
   width: 100%;
   max-width: 120px;
   border-radius: 32px;
-  background-color: var(--colorRed);
+  background-color:red;
   font-family: var(--fontSyne);
   font-size: 16px;
   font-weight: 700;
@@ -119,10 +121,8 @@ header {
   color: var(--colorRed);
 }
 .section_title {
-  width: 440pxpx;
-  height: 113px;
-  gap: 22px;
- text-align: center;
+  padding: 20px 0;
+text-align: center;
 }
 .section_title h1 {
   font-family: Syne;
@@ -146,25 +146,31 @@ text-decoration-skip-ink: none;
 text-align: center;
 }
 .section_baner {
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+ width: 100%;
+ height: 400px;
 }
-.section_baner>img{
+.section_baner img{
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.section_carCollection {
+
+
+.section_carCollection_main{
+  padding: 15px 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: flex-start;
+  gap: 30px;
+}
+/* .section_carCollection {
   width: 440pxpx;
   height: 113px;
   gap: 22px;
  text-align: center;
  align-items:center
-}
+} */
 .section_carCollection > span {
   font-family: var(--fontSyne);
   font-size: 20px;
@@ -188,11 +194,10 @@ text-align: center;
   
 }
 .section_carCollection_row {
-  margin-top: 100px;
+  margin-top: 20px;
   display: grid;
-  row-gap: 48px;
-  column-gap: 64px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3 , 1fr);
+  gap: 30px;
 }
 .section_carCollection_row_col {
   width: 100%;
@@ -213,14 +218,19 @@ text-align: center;
 }
 .section_carCollection_row_col_text {
   width: 100%;
-  height: 134px;
+  max-width: 936px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 32px;
+  margin-top: 48px;
+
+  width: Hug (936px)px;
+height: Hug (406px)px;
+gap: 48px;
+opacity: 0px;
+
 }
-.section_carCollection_row_col_text > h2 {
-  font-family: var(--fontSyne);
+.section_carCollection_row_col_text > h2 {font-family: var(--fontSyne);
   color: var(--colorBlack);
   font-size: 24px;
   line-height: 28.8px;
@@ -329,6 +339,115 @@ text-align: center;
   padding: 80px 193px 80px 0;
 }
 
+
+/* side_bar */
+.side_bar_title{
+  width: 100%;
+  padding: 20px;
+}
+.Cards_pages{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Cards_pages_item{
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.Cards_pages_item h1{
+font-size: 16px;
+font-weight: 700;
+line-height: 19.2px;
+text-align: left;
+}
+
+
+/*Category*/
+.Categories{
+  padding-top: 15px;
+}
+.Categories > h1{
+  padding: 10px 0;
+  font-size: 28px;
+}
+.Categories_title{
+  padding: 8px 0;
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+}
+.Categories_title h1 , h2{
+  font-size: 18px;
+}
+.Tags{
+font-size: 16px;
+margin-top: 24px;
+font-family: var(--fontSyne);
+width: 100%;
+font-size: 16px;
+font-weight: 700;
+line-height: 19.2px;
+text-align: left;
+}
+.section_carCollection_pagination {
+  margin: auto;
+  margin-top: 100px;
+  width: 100%;
+  max-width: 247px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 21.5px;
+}
+.section_carCollection_pagination_item {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  font-family: var(--fontSyne);
+  color: rgba(19, 17, 17, 0.6);
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.section_carCollection_pagination_item1{
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  font-family: var(--fontSyne);
+  color:red;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.section_carCollection_pagination_item:first-of-type {
+  color: var(--colorRed);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.2px;
+  border-color: var(--colorRed);
+}
+.section_carCollection_pagination_item:hover {
+  color:red;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.2px;
+  border-color: var(--colorRed);
+  margin-top: 2px;
+  
+}
+
+
 .footer_title_img{
   width: 100%;
   height: 400px;
@@ -392,9 +511,7 @@ footer {
   display: flex;
   justify-content: space-between;
   gap: 15px;
-}
-
-.footer_sub {
+}.footer_sub {
   width: 100%;
   max-width: 552px;
   margin-top: 38px;
@@ -489,10 +606,10 @@ color: #222;
   color: var(--colorBlack);
 }
 .footer_button{
-  width:212px;
-height:40px;
+width: 212px;
+height: 40px;
 padding: 10px 26px 10px 26px;
-gap: 10px;
+margin-top: 10px;
 border-radius: 32px 0px 0px 0px;
 
 
@@ -514,4 +631,53 @@ border-radius: 32px 0px 0px 0px;
   align-items: center;
 }
 
+.footer-title{
+  width: 95%;
+  padding: 40px;
+  height: 399px;
+  background: url(../img/footer.jfif) no-repeat center / cover;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+    margin: 20px auto;
+  border-radius: 25px;
+}
+.footer-title h3{
 
+font-family: Syne;
+font-size: 20px;
+font-weight: 600;
+line-height: 24px;
+text-align: left;
+color: white;
+}
+.footer-title h1{
+  padding: 15px 0;
+font-family: Syne;
+font-size: 56px;
+font-weight: 700;
+line-height: 67.2px;
+text-align: right;
+color: white;
+}
+.footer-title button{
+  padding: 10px;
+  color: white;
+  background: red;
+  border: none;
+  border-radius: 20px;
+  font-size: 17px;
+}
+.topBtn {
+  width: 36px;
+  height: 36px;
+  background: red;
+  border-radius: 50%;
+  position: sticky;
+  bottom: 36px;
+  left: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
